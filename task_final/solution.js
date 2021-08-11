@@ -44,11 +44,11 @@ function sendRequest(name, phone, address, goods, sum) {
     }
 
     data.order.address = `ул. ` +address["street"] + `, дом ` + address["house"] + `, `+ address["entrance"] + ` подъезд, ` + address["floor"] + ` этаж, кв `+ address["flat"];
-    //data.order.sum = name + phone + address + goods + sum;
     data.order.sum = sum;
-    //data.client = 'Иван';
     data.client = name + ` ` + phone;
+    
     //data.goods = data.goods.title + countOfGoods;
+    //data.goods = 
     let jsonData = JSON.stringify({data});
 
     return jsonData;
